@@ -1,0 +1,97 @@
+###balise de premier niveau###
+<html>	Balise principale
+<head>	En-tête de la page
+<body>	Corps de la page
+
+###code minimal###
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Titre</title>
+    </head>
+
+    <body>
+    
+    </body>
+</html>
+
+###balise d'en-tete###
+<link />	Liaison avec une feuille de style
+<meta />	Métadonnées de la page web (charset, mots-clés, etc.)
+<script>	Code JavaScript
+<style>		Code CSS
+<title>		Titre de la page
+
+###balise de structuration du texte###
+<abbr>			Abréviation
+<blockquote>	Citation (longue)
+<cite>			Citation du titre d'une œuvre ou d'un évènement
+<q>				Citation (courte)
+<sup>			Exposant
+<sub>			Indice
+<strong>		Mise en valeur forte
+<em>			Mise en valeur normale
+<mark>			Mise en valeur visuelle
+<h1>			Titre de niveau 1
+<h2>			Titre de niveau 2
+<h3>			Titre de niveau 3
+<h4>			Titre de niveau 4
+<h5>			Titre de niveau 5
+<h6>			Titre de niveau 6
+<img />			Image
+<figure>		Figure (image, code, etc.)
+<figcaption>	Description de la figure
+<audio>			Son
+<video>			Vidéo
+<source>		Format source pour les balises <audio> et <video>
+<a>				Lien hypertexte
+<br />			Retour à la ligne
+<p>				Paragraphe
+<hr />			Ligne de séparation horizontale
+<address>		Adresse de contact
+<del>			Texte supprimé
+<ins>			Texte inséré
+<dfn>			Définition
+<kbd>			Saisie clavier
+<pre>			Affichage formaté (pour les codes sources)
+<progress>		Barre de progression
+<time>			Date ou heure
+
+###balise de liste###
+<ul>	Liste à puces, non numérotée
+<ol>	Liste numérotée
+<li>	Élément de la liste à puces
+<dl>	Liste de définitions
+<dt>	Terme à définir
+<dd>	Définition du terme
+
+###balises de tableau###
+<table>		Tableau
+<caption>	Titre du tableau
+<tr>		Ligne de tableau
+<th>		Cellule d'en-tête
+<td>		Cellule
+<thead>		Section de l'en-tête du tableau
+<tbody>		Section du corps du tableau
+<tfoot>		Section du pied du tableau
+
+###balise de formulaire###
+<form>		Formulaire
+<fieldset>	Groupe de champs
+<legend>	Titre d'un groupe de champs
+<label>		Libellé d'un champ
+<input />	Champ de formulaire (texte, mot de passe, case à cocher, bouton, etc.)
+<textarea>	Zone de saisie multiligne
+<select>	Liste déroulante
+<option>	Élément d'une liste déroulante
+<optgroup>	Groupe d'éléments d'une liste déroulante
+
+###balise generique###
+<span>	Balise générique de type inline
+<div>	Balise générique de type block
+
+###class,id,style###
+class: indique le nom de la classe CSS à utiliser.
+id: donne un nom à la balise. Ce nom doit être unique sur toute la page car il permet d'identifier la balise
+style: cet attribut vous permet d'indiquer directement le code CSS à appliquer. 

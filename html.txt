@@ -1,0 +1,364 @@
+balise:
+<balise>
+balise ne paire:
+<titre>texte</titre>
+balise orphelines:
+<image />
+attribut:
+Les attributs sont un peu les options des balises. Ils viennent les compléter pour donner des informations supplémentaires.
+<balise attribut="valeur">
+<image nom="photo.jpg"/>
+ex:
+<citation auteur="Neil Amstrong" date="1996">
+c'est un petit pas ....
+</citation>
+
+attention balise en anglais normalement
+
+type d'un fichier html:
+
+<!DOCTYPE html>
+<html>						<!--debut html-->
+    <head>						<!--info ordi-->
+        <meta charset="utf-8" />	
+        <title>Titre</title>		<!--titre dans l'onglet<100 char aussi dans 
+        							google recherche-->
+    </head>					<!-- commentaaire-->
+
+    <body>					<!--corps de la page-->
+    
+    <h1>tire super important</h1>
+    <p>paragraohe<br /> 
+    a la ligne </p>
+    <em>italique</em>
+    <strong>gras</strong>
+    <mark>fluo</mark>
+    contact<a href="http://www.google.com">page</a>
+    
+    
+    </body>
+</html>						<!--fin html-->
+
+
+
+L'en-tête <head> : cette section donne quelques informations générales sur la 
+page comme son titre, l'encodage (pour la gestion des caractères spéciaux), etc. 
+Cette section est généralement assez courte. Les informations que contient 
+l'en-tête ne sont pas affichées sur la page, ce sont simplement des informations 
+générales à destination de l'ordinateur. Elles sont cependant très importantes !
+
+Le corps <body> : c'est là que se trouve la partie principale de la page. Tout 
+ce que nous écrirons ici sera affiché à l'écran. C'est à l'intérieur du corps 
+que nous écrirons la majeure partie de notre code.
+
+balise <p> pour délimiter les paragraphes.
+
+<h1> </h1> : signifie « titre très important ». En général, on s'en sert pour afficher le titre de la page au début de celle-ci.
+<h2> </h2> : signifie « titre important ».
+....
+<h6> </h6> : titre vraiment, mais alors là vraiment pas important du tout.
+
+Mettre un peu en valeur:<em> </em>
+Mettre bien en valeur:<strong> </strong>
+
+liste:
+1.liste non ordonnées ou listes a puces
+<ul>
+	<li>fraises</li>
+	<li>framboise</li>
+</ul>
+
+2. liste ordonee
+<ol>
+	<li>tester</li>
+	<li>testcrat</li>
+<ol>
+
+Lien entre page:
+contact<a href="http://www.google.com">page</a> 
+lien absolue car on indique l'adresse complete
+
+lien vers une page du site:
+contact<a href="page2.html">page</a> 
+
+Ancre:
+Aller directement à la partie traitant de :<br />
+    <a href="#cuisine">La cuisine</a>
+cette commande va sauter directement a la cuisine
+    <h2 id="cuisine">La cuisine</h2>
+
+ancre dans une autre page web
+<a href="ancres.html#rollers">
+
+astuces:
+<a href="http://www.google.com" title="acces vers google"></a>
+ici le title va apparaitre en tant que bulle avant de cliquer , juste lors du survol
+
+<a href="http://www.google.com" target="_blank"></a>
+ouvre une nouvelle fenetre new tab avec le site google
+mais vaut mieux pas l'utiliser, ca perturbe la navigation, l'utilisateur a lui meme le choix
+
+<p><a href="mailto:votrenom@bidule.com">Envoyez-moi un e-mail !</a></p>
+ca ouvre l'application de mail par defaut
+
+<p><a href="monfichier.zip">Télécharger le fichier</a></p>
+telecharge le fichier
+
+Inserer une image:
+format: 
+	-jpeg
+	-png
+	-gif -animation
+
+<img src="fleurs.jpg" alt="photo d'une rose" />
+alt c'est pour si la photo ne se charge pas, ex non voyant, doivent savoir ce que c'est
+
+<a href="fleurs.jpg"><img src="fleurs_mini.jpg" alt="photo d'une rose" title="clicker pour agrandir"/></a>
+affiche en petit ->click photo en grand
+
+creation d'une figure:
+<figure>
+	<img src="fleurs.jpg" alt="rose">
+	<figcaption>ceci est un rose de ClujNapoca</figcaption> <!--legende-->
+</figure>
+
+Si l'image apporte une information : placez l'image dans une figure sinon dans un paragraphe.
+
+
+###balise de structure###
+<header>l'en-tête</header>
+<footer>le pied de page</>
+<nav>principaux lien de navigation
+	acceuil, 
+	forum
+</nav>
+<section> section de la page:sert a regrouper des contenus en fonction de leur 
+thématique, elle englobe généralement une portion du contenu au centre de la 
+page
+section
+sect,sect
+</section>
+<aside>info complementaire qui sont sur le cote de la page ex wikipedia
+</aside>
+<article>article inependant:sert à englober une portion généralement autonome de 
+la page. C'est une partie de la page qui pourrait ainsi être reprise sur un 
+autre site. C'est le cas par exemple des actualités (articles de journaux ou de 
+blogs).
+</article>
+
+###compatibilité IE6###
+HTML5shiv->javascript
+<head>
+<!--[if lt IE 9]>
+    <script src="http://github.com/aFarkas/html5shiv/blob/master/dist/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+
+###tableau###
+<table> </table>
+<tr> </tr> indique debut et fin d'une ligne du tableau
+<td> </td> indique debut et fin du contenu d'une celule
+<th> </th> premiere ligne du tableau , tire de colonne
+border-collapse:collapse
+				separate
+<caption<titre</caption>
+
+exemple:
+<table>
+   <caption>Passagers du vol 377</caption>
+
+   <tr>
+       <th>Nom</th>
+       <th>Âge</th>
+       <th>Pays</th>
+   </tr>
+   <tr>
+       <td>Carmen</td>
+       <td>33 ans</td>
+       <td>Espagne</td>
+   </tr>
+
+en css caption-side :top ou bottom pour la place du titre
+
+###formulaire###
+<form>
+	<p>texte...</p>
+</form>
+-method="post" : c'est la méthode la plus utilisée pour les formulaires car elle 
+permet d'envoyer un grand nombre d'informations. Les données saisies dans le 
+formulaire ne transitent pas par la barre d'adresse
+exemple
+-c'est l'adresse de la page ou du programme qui va traiter les informations 
+(réponse au problème n°2). Cette page se chargera de vous envoyer un e-mail avec 
+le message si c'est ce que vous voulez, ou bien d'enregistrer le message avec 
+tous les autres dans une base de données.
+
+<form method="post" action="traitement.php">
+   <p>Texte à l'intérieur du formulaire</p>
+</form>
+
+-zone de texte monoligne:
+<input type="text" name="pseudo"/>
+ce que l'utilisateur entre va etre stocke dans l'attribut type
+
+<form method="post" action="traitement.php">
+   <p><input type="text" name="pseudo" /></p>
+</form>
+
+-les libelles
+<label>Votre entre</label>
+<form method="post" action="traitement.php">
+Pour lier le label au champ, il faut lui donner un attribut for qui a la même 
+valeur que l'id du champ… Le mieux est de le voir sur un exemple :
+   <p>
+       <label for="pseudo">Votre pseudo</label> : <input type="text" 
+       name="pseudo" id="pseudo" />
+   </p>
+</form>
+
+On peut agrandir le champ avec size.
+On peut limiter le nombre de caractères que l'on peut saisir avec maxlength.
+On peut pré-remplir le champ avec une valeur par défaut à l'aide de value.
+On peut donner une indication sur le contenu du champ avec placeholder. Cette 
+indication disparaîtra dès que le visiteur aura cliqué à l'intérieur du champ.
+
+pour les mot de passe, juste le type="password" 
+
+###zone de texte multiligne###
+<form method="post" action="traitement.php">
+   <p>
+       <label for="ameliorer">Comment pensez-vous que je pourrais améliorer mon site ?</label><br />
+       <textarea name="ameliorer" id="ameliorer"></textarea>
+   </p>
+</form>
+
+on peut modifier la taille du <textarea> soit en css(width,height),soit
+avec des attributs(rows:nbre de ligne,cols:nbre de cologne)
+
+pour avoir un texte par defaut, il suffit de mettre le texte entre les balise
+
+-En fonction du type d'entre:
+ex: <input type="email" />
+ex: <input type="url" />
+ex: <input type="tel" />
+ex: <input type="number" /> attribut:min,max,step(le pas si 2 juste 2 4..)
+ex: <input type="range" /> c'est un slider
+ex: <input type="color" />
+ex: <input type="date" /> ou bien time,week,month,datetime(sans decalage horaire,datetime-local(sans gestion du decalage horaire)
+ex: <input type="search" />
+
+-les cases a cocher:
+<form method="post" action="traitement.php">
+   <p>
+       Cochez les aliments que vous aimez manger :<br />
+       <input type="checkbox" name="frites" id="frites" /> <label for="frites">Frites</label><br />
+       <input type="checkbox" name="steak" id="steak" /> <label for="steak">Steak haché</label><br />
+       <input type="checkbox" name="epinards" id="epinards" /> <label for="epinards">Epinards</label><br />
+       <input type="checkbox" name="huitres" id="huitres" /> <label for="huitres">Huitres</label>
+   </p>
+</form>
+case coche par defaut avec attribut checked
+
+si on veut case a cocher avec un seul choix: type="radio" et name=groupe
+
+-liste deroulante:
+<form method="post" action="traitement.php">
+   <p>
+       <label for="pays">Dans quel pays habitez-vous ?</label><br />
+       <select name="pays" id="pays">
+           <option value="france">France</option>
+           <option value="espagne">Espagne</option>
+           <option value="italie">Italie</option>
+           <option value="royaume-uni">Royaume-Uni</option>
+           <option value="canada">Canada</option>
+           <option value="etats-unis">États-Unis</option>
+           <option value="chine">Chine</option>
+           <option value="japon">Japon</option>
+       </select>
+   </p>
+</form>
+
+si on veut option par defaut: avec attribut selected
+
+on peut aussi separaer les option avec <optgroup label="Europe>
+	option...
+	</optgroup>
+	
+-regrouper vos champs avec <fieldset> champs</fieldset>
+-fixer le curseur dans un champs avec autofocus
+-rendre un champs obligatoire avec required
+css :invalid et :required et :focus
+
+-bouton d'envoyer:
+<input type="submit" value="Envoyer" />
+type="reset"
+type="image" equivalent de submit mais present sous forme d'image,attribut src pour ul de l'image
+type="button" ->javascript
+
+###video et audio###
+<audio src="musique.mp3">mesage seuelemnt pour les anciens navigateur</audio>
+-controls : pour ajouter les boutons « Lecture », « Pause » et la barre de défilement.
+-width : pour modifier la largeur de l'outil de lecture audio.
+-loop : la musique sera jouée en boucle.
+-autoplay : la musique sera jouée dès le chargement de la page.
+-preload : indique si la musique peut être préchargée dès le chargement de la page ou non. Cet attribut peut prendre les valeurs :
+a)auto (par défaut) : le navigateur décide s'il doit précharger toute la musique, uniquement les métadonnées ou rien du tout.
+b)metadata : charge uniquement les métadonnées (durée, etc.).
+c)none : pas de préchargement. Utile si vous ne voulez pas gaspiller de bande passante sur votre site.
+<audio controls>
+    <source src="hype_home.mp3">
+    <source src="hype_home.ogg">
+</audio>
+
+
+<video src="sintel.webm"⁪></video⁪⁪>
+meme attribut que pour audio et:
+-poster:image à afficher à la place de la vidéo tant que celle-ci n'est pas 
+lancée.
+-width,height largeur et hauter
+ex:<video src="sintel.webm" controls poster="sintel.jpg" width="600">⁪mettre a jour</video⁪⁪>
+
+<video controls poster="sintel.jpg" width="600">
+    <source src="sintel.mp4">
+    <source src="sintel.webm">
+    <source src="sintel.ogv">
+</video>
+
+
+###media queries###
+<link rel="stylesheet" media="screen and (max-width: 1280px)" href="petite_resolution.css" />
+ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" /> <!-- Pour tout le monde -->
+        <link rel="stylesheet" media="screen and (max-width: 1280px)" href="petite_resolution.css" /> <!-- Pour ceux qui ont une résolution inférieure à 1280px -->
+        <title>Media queries</title>
+    </head>
+ou bien dans le fichier css:
+@media screen and (max-width: 1280px)
+{
+    /* Rédigez vos propriétés CSS ici */
+}
+
+regles disponible:
+-color
+-height
+-width
+-device-height
+-device-width
+-orientation
+-media:
+	screen:ecran classique
+	handheld:periph mobile
+	print:impression
+	tv
+	projection:projecteur
+	all:tout type d'ecran
+	
+on peut ajouter min- et max-
+on peut combiner les regles avec and,not,only(uniquement)
+sur mobile on peut aussu :
+<meta name="viewport" content="width=device-width" />

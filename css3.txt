@@ -1,0 +1,367 @@
+on ajoute dans la partie head du code html :
+<link rel="stylesheet" href="fichier.css"/>
+
+dans le fichier.css:
+
+p{
+  color:blue;
+}
+
+on écrit les noms des balises dont on veut modifier l'apparence. Par exemple, si je veux modifier l'apparence de tous les paragraphes <p>, je dois écrire p.
+
+propriété color qui permet d'indiquer la couleur du texte, font-size qui permet d'indiquer la taille du texte, etc. Il y a beaucoup de propriétés CSS et, comme je vous l'ai dit, je ne vous obligerai pas à les connaître toutes par cœur.
+
+exemple de fichier.css:
+
+balise1
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+}
+
+balise2
+{
+    propriete1: valeur1;
+    propriete2: valeur2;
+    propriete3: valeur3;
+    propriete4: valeur4;
+}
+
+balise3
+{
+    propriete1: valeur1;
+}
+
+on peut creer propre balise
+
+on peut utiliser les attribut class et id
+
+<h1 class="introduction"> wauw</h1>
+
+dans le fichier css
+.introduction{
+	color:bleu;
+	}
+	
+le nom d'un id ne s'utilise qu'une fois dans le code, generalement pour les photos
+et dans le code css:
+#nom_id{
+propritete:valeur;
+}
+
+colorier un nom dans une phrase:
+<p>Bonjour et <span class="salutations">bienvenue</span> sur mon site !</p>
+
+selectionner le texte a colorier ou a modifier l'apparance:
+
+* : sélecteur universel
+
+*
+{
+
+}
+Sélectionne toutes les balises sans exception. On l'appelle le sélecteur universel.
+
+A B : une balise contenue dans une autre
+
+h3 em
+{
+
+}
+Sélectionne toutes les balises <em> situées à l'intérieur d'une balise <h3>. Notez qu'il n'y a pas de virgule entre les deux noms de balises.
+
+Exemple de code HTML correspondant :
+
+<h3>Titre avec <em>texte important</em></h3>
+A + B : une balise qui en suit une autre
+
+
+h3 + p
+{
+
+}
+Sélectionne la première balise <p> située après un titre <h3>.
+
+Exemple :
+
+<h3>Titre</h3>
+
+<p>Paragraphe</p>
+A[attribut] : une balise qui possède un attribut
+
+a[title]
+{
+
+}
+Sélectionne tous les liens <a> qui possèdent un attribut title.
+
+Exemple :
+
+<a href="http://site.com" title="Infobulle">
+A[attribut="Valeur"] : une balise, un attribut et une valeur exacte
+
+a[title="Cliquez ici"]
+{
+
+}
+Idem, mais l'attribut doit en plus avoir exactement pour valeur « Cliquez ici ».
+
+Exemple :
+
+<a href="http://site.com" title="Cliquez ici">
+A[attribut*="Valeur"] : une balise, un attribut et une valeur
+
+a[title*="ici"]
+{
+
+}
+Idem, l'attribut doit cette fois contenir dans sa valeur le mot « ici » (peu importe sa position).
+
+Exemple :
+
+<a href="http://site.com" title="Quelque part par ici">
+
+taille: font-size: 16 px(pixel mais cm , mm ou bien valeur relative:
+xx-small : minuscule ;
+x-small : très petit ;
+small : petit ;
+medium : moyen ;
+large : grand ;
+x-large : très grand ;
+xx-large : euh… gigantesque;
+font-size: 1.0em normale
+
+police:
+font-family:-Arial ;
+Arial Black ;
+Comic Sans MS ;
+Courier New ;
+Georgia ;
+Impact ;
+Times New Roman ;
+Trebuchet MS ;
+Verdana
+ou bien police qui faut donner au code pour etre telechager par le navigateur
+sans-serif police standard par defaut
+
+style:
+font-style:
+italic
+oblique
+normal
+
+mettre en gras:
+font-weight:
+bold=gras
+normal
+
+soulignement et autres decorations
+text-decoration:
+underline:soulignié
+line-through:barré
+overline:logne au dessus
+blink:clignotant
+none:normal (par defaut)
+
+alignement:
+text-align:
+left
+center
+right
+justify:texte qu'il prenne toute la largeur possible sans laisser d'espace blanc
+en fin de lignes
+
+faire flotter:
+float:
+ou ca
+ex:
+<p><img src="flash.gif" class="imageflottante" alt="Image flottante" /></p>
+<p>Ce texte est écrit à côté de l'image flottante.</p>
+<p class="dessous">Ce texte est écrit sous l'image flottante.</p>
+.dessous{
+clear:both,left,right en fonction de float
+}
+###body###
+dans la balise body et grace a l'heritage:
+couleur du texte:
+color; red
+ou bien color: #hexadecimal
+ou bien rgb(240,96,204);
+
+couleur de fond:
+background-color:black;
+
+image de fond:
+background-image: url("neige.png")
+background-attachement:fixer le fond
+fixed: l'image de fond reste fixe
+scroll: l'image de fond defile avec le texte ->default
+background-repeat:répetition du fond
+no-repeat
+repeat-x:fond repete uniquement sur la premiere ligne,horizontalement
+repeat-y:premiere colone verticalement
+repeat:->par defaut
+background-position:30px 50px
+30px de la gaucge et 50px du haut
+ou bien 
+top,bottom,left,center,right et combinaire
+
+pour toutes ces propriete on peut le faire en une ligne
+background: url() fixed no repeat ...;
+mais si on veut plusieur images, on aura la premiere suivi des propriete ensuite 
+la deuxieme suivi des proproete etc...
+
+transparence:
+opacity: 0.6; inverse de la transparence
+valeur entre 0 et 1, 1=opaque->defaut
+0 totalement transparent
+ou bien avec rbga(valeur,valeur,valeur,opacité)
+toujours entre 0 et 1 , en desous de 1 il est transparant
+###
+
+bordure:
+border: propr:
+largeur 2px
+couleur:hexa,rgb,red
+type de bordure voir photo de bordure
+border-top->bordure haut
+border-bottom
+border-left
+border-right
+border-radius:10px,arrondir les bordure
+pour chaque coins aussi :
+border-radius:10px 5px 10px 5px
+1.HG
+2.HD
+3.BD
+4.BG
+courbe elliptique pour les anbles :
+20px/10px
+
+ombres:
+- box-shadow: 4 valeurs dans l'ordre suivant:
+1 decalage horizontal de l'ombre
+2 decalage vertical de l'ombre
+3 l'adoucissement du dégradé
+4 la couleur de l'ombre
+(opt 5) inset ombre interieure du bloc =effet enfoncé
+- text-shadow:ombre du texte meme principe que box
+
+###apparition dynamique###
+
+survol:
+balise:hover{
+modification propriete
+}
+
+click lors de la selection:
+balise:active{
+}
+bamise:focus{quand c'est selectionn"
+}
+
+liend deja visité:
+balise:visited{par defaut c'est le violet
+}
+
+###dimensions des block sur la page###
+
+Un bloc a des dimension précises: largeur et hauteur->css:
+width: largeur en px ou %
+height:hauteur en px ou %
+en plus de ces deux propriete on peut definit par defaut :
+min-width : largeur minimale ;
+min-height : hauteur minimale ;
+max-width : largeur maximale ;
+max-height : hauteur maximale.
+
+###marge###
+marge interieure et exterieure imaginez un texte encadré
+L'espace entre le texte et la bordure est la marge intérieure
+L'espace entre la bordure et le bloc suivant est la marge extérieure 
+Pour la marge interieure:
+padding: px
+Pour la marge exterieure:
+margin: px
+on peut combiner ces propriete par exemple margin-top etc pour choisir la marge
+desiré
+ou bien par exemple margin: 2px 0 3px 1px (2px en haut,0px a droite,3px en bas,1px a gauche)
+pour centrer un bloc, il faut :
+-determier une largeur au bloc avec width
+-indiquer margin:auto
+
+overflow:(texte qui depasse en bas d'une boite)
+-visible (par défaut) : si le texte dépasse les limites de taille, il reste 
+visible et sort volontairement du bloc.
+-hidden : si le texte dépasse les limites, il sera tout simplement coupé. On ne 
+pourra pas voir tout le texte.
+-scroll : là encore, le texte sera coupé s'il dépasse les limites. Sauf que 
+cette fois, le navigateur mettra en place des barres de défilement pour qu'on 
+puisse lire l'ensemble du texte. C'est un peu comme un cadre à l'intérieur de la 
+page.
+-auto : c'est le mode « pilote automatique ». En gros, c'est le navigateur qui 
+décide de mettre ou non des barres de défilement (il n'en mettra que si c'est 
+nécessaire). C'est la valeur que je conseille d'utiliser le plus souvent.
+
+word-wrap:couper les texte trop larges
+word-wrap:break-word;
+
+###propriete display###
+.class
+display: none
+masque element de classe et pour les faire apparaitre il faudra un code javascript
+
+transformer en inline-block;
+display:inline-block --meme ligne de base
+vertical-align: baseline,top,middle,bottom,px ou %
+mais pq ca fonctionne dans ie6:
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="style_ie.css" />
+<![endif]-->
+
+et dans le style.ie.css:
+nav, section
+{
+    display: inline;
+    zoom: 1;
+}
+
+###positonement###
+position:
+-absolute:positionnement absolue:permet de placer un élément n'importe où sur la 
+page (en haut à gauche, en bas à droite, tout au centre, etc.).
+-fixed:positionement fixe:identique au positionnement absolu mais, cette fois, 
+l'élément reste toujours visible, même si on descend plus bas dans la page
+-relative:positionnement relatif:positionnement relatif : permet de décaler 
+l'élément par rapport à sa position normale.
+
+
+
+position:absolute
++ une des :left,right,top,bottom,par rapport au coin gauche de la page
+
+ex position:absolute;
+	right:0)x;
+pour savoir quel element passe avant l'autre, z-index: ordre
+ 
+ position:fixed
+ idem que absolu mais objet reste toujours a la meme place sur la page meme si 
+ on scroll
+
+ position:relative
+ bouge une ligne par exemple le strong dans un paragraphe
+
+
+
+
+
+
+
+
+
+
+
+
+
+
